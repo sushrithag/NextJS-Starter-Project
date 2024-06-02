@@ -136,9 +136,13 @@ export default function EditInvoiceForm({
             ))}
           </div>
           <div>
-            <p className="mt-6 text-sm-2 text-red-500" key={state.message}>
-              {state.message}
-            </p>
+            {state.message && (
+              <>
+                <p className="mt-6 text-sm-2 text-red-500" key={state.message}>
+                  {state.message}
+                </p>
+              </>
+            )}
           </div>
         </fieldset>
       </div>

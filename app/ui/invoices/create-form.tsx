@@ -129,9 +129,13 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
             ))}
           </div>
           <div id="invoice-error" aria-live="polite" aria-atomic="true">
-            <p className='mt-2 text-sm text-red-500' key={state.message}>
-              {state.message}
-            </p>
+            {state.message && (
+              <>
+                <p className='mt-2 text-sm text-red-500' key={state.message}>
+                  {state.message}
+                </p>
+              </>
+            )}
           </div>
         </fieldset>
       </div>
